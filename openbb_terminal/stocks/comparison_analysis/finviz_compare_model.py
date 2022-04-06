@@ -88,8 +88,5 @@ def get_comparison_data(data_type: str, similar: List[str]):
     try:
         return screen.screener_view(verbose=0)
     except IndexError:
-        console.print("[red]Invalid data from website[red]\n")
-        return pd.DataFrame()
-    except AttributeError:
-        console.print("[red]Invalid data from website[red]\n")
+        console.print("[red]Invalid data from website[red]")
         return pd.DataFrame()
